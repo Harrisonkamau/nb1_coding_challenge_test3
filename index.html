@@ -1,44 +1,45 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html>
 <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<title>Data Binding</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="./code.css">
 
-	<link rel="stylesheet" href="code.css">
-	<script src="./appController.js"></script>
-	<title>coding challenge</title>
-		<div id="nav-bar">
-		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+		<script src="./appController.js"></script>
+
 </head>
-<body id="body">
+<body>
 
-	<section class="col-sm-6">
-		<div class="row" id="p2"></div>
-	</section>
+	 <section class="row">
 
-	<section class="col-sm-6">
-		<div class="row" id="p3"></div>
-	</section>
+    <h1 class="text-center">Attendants list</h1>
 
-	<section class="col-sm-4">
-		<div class="row" id="p4" ></div>
-	</section>
+    <div class="col-sm-12" ng-controller="attendants">
+      <table border="1" width="100%">
+        <tr ng-repeat="x in items">
+          <td>
+            <img ng-src="{{x.img_url}}" />
+          </td>
+          <td>
+            {{x.name}}
+          </td>
+          <td>
+            {{x.age}}
+          </td>
 
-	<section class="col-sm-4">
-		<div class="row" id="p5"></div>
-	</section>
+        </tr>
+      </table>
 
-	<section class="col-sm-4">
-		<div class="row" id="p6"></div>
+    </div>
+    </section>
 
-	</section>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 
-	<footer>
-		<section class="col-sm-12">
-			<div class="row" id="p7">
-		
-			</div>
-	</section>
-	</footer>
-<script src=./bootstrap.min.js></script>
-<script src="./bootstrap.js"></script>
 </body>
+
 </html>

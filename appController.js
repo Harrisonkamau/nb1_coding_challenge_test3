@@ -2,9 +2,9 @@
 
 var myApp = angular.module('myApp',[]);
 
-myApp.controller('studentList', function($scope) {
+myApp.controller('myController', function($scope) {
 
-	$scope.students = [
+	$scope.attendants = [
 	    {name: "Mike", age: 12,image: "http://placehold.it/150x150"},
 	    {name: "Joan", age: 25,image: "http://placehold.it/150x150"},
 	    {name: "Princeton", age: 41,image: "http://placehold.it/150x150"},
